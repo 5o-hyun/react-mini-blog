@@ -15,7 +15,7 @@ const MainPage = (props) => {
         <PostList
           posts={data}
           onClickItem={(item) => {
-            navigate(`/post/$(item.id)`);
+            navigate(`/post/${item.id}`);
           }}
         />
       </Container>

@@ -8,18 +8,19 @@ import TextInput from "../ui/TextInput";
 
 const PostViewPage = (props) => {
   const navigate = useNavigate();
-  const { postId } = useParams;
+  const { postId } = useParams();
   const [comment, setComment] = useState("");
 
   const post = data.find((item) => {
-    return item.id === postId;
+    return item.id == postId;
   });
+
   return (
     <Wrapper>
       <Container>
         <Button title="뒤로가기" onClick={() => navigate("/")} />
         <div className="postContainer">
-          <p className="titleText">{postMessage.title}</p>
+          <p className="titleText">{post.title}</p>
           <p className="contentText">{post.content}</p>
         </div>
 
